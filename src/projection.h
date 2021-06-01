@@ -1,4 +1,7 @@
 
+#ifndef PROJECTION_H
+#define PROJECTION_H
+
 #include "vector.h"
 
 point3 model_to_world_space();
@@ -33,3 +36,5 @@ point3 ndc_to_raster_space(point3 p_ndc, float image_width, float image_height)
         (p_ndc.y() + 1) / 2 * image_height,
         -p_ndc.z()); // -camera.z
 }
+
+#endif
